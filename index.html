@@ -82,7 +82,7 @@ main { max-width: 1380px; margin: auto; padding: 0 35px 130px; }
 .short-form .card:hover { transform: translateY(-5px); background: #111a28; border-color: #3f5573; box-shadow: 0 10px 35px rgba(0,0,0,.5); }
 .short-form .thumbnail { aspect-ratio: 9 / 16; border-bottom: 1px solid #27364b; }
 .short-form .card-content { padding: 14px; background: #111a28; }
-.short-form .card-label { display: none; }
+/* .card-label explicitly kept visible now! */
 .short-form .card-title { font-size: 13.5px; line-height: 1.45; font-weight: 600; color: #ffffff; }
 .short-form .play-button { width: 50px; height: 50px; background: rgba(0, 0, 0, 0.45); border: 2px solid rgba(255, 255, 255, 0.4); color: #8cb4ff; padding-left: 4px; font-size: 16px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); box-shadow: none; }
 .short-form .card:hover .play-button { background: rgba(0, 0, 0, 0.7); border-color: rgba(255, 255, 255, 0.75); transform: translate(-50%,-50%) scale(1.05); box-shadow: none; }
@@ -185,9 +185,11 @@ footer { border-top: 1px solid rgba(255,255,255,.08); padding: 45px 35px; text-a
     function buildCards(urls, containerId, label, isShort) {
         const container = document.getElementById(containerId);
         urls.forEach(url => {
-            const vidMatch = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
+            // Regex to extract video ID from standard, shorts, or live links
+            const vidMatch = url.match(/(?:v=|\/shorts\/|\/live\/|youtu\.be\/)([0-9A-Za-z_-]{11})/);
             if (!vidMatch) return;
             const vidId = vidMatch[1];
+            
             // Shorts look better with hqdefault, longs use maxresdefault
             const imgSrc = isShort ? `https://img.youtube.com/vi/${vidId}/hqdefault.jpg` : `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`;
             
@@ -202,26 +204,30 @@ footer { border-top: 1px solid rgba(255,255,255,.08); padding: 45px 35px; text-a
                 </a>
                 <div class="card-content">
                     <p class="card-label">${label}</p>
-                    <p class="card-title yt-title" data-url="${url}">Loading title...</p>
+                    <p class="card-title yt-title" data-original-url="${url}" data-vid-id="${vidId}">Loading title...</p>
                 </div>
             `;
             container.appendChild(article);
         });
     }
 
-    // Render elements instantly
+    // Render elements instantly with accurate labels
     buildCards(longVideos, 'long-videos-grid', 'Long-Form Media', false);
-    buildCards(creativeShorts, 'creative-shorts-grid', 'Creative Short', true);
-    buildCards(normalShorts, 'normal-shorts-grid', 'Normal Short', true);
+    buildCards(creativeShorts, 'creative-shorts-grid', 'Short-Form Video', true);
+    buildCards(normalShorts, 'normal-shorts-grid', 'Short-Form Video', true);
 
-    // Fetch accurate titles progressively to avoid browser lag[cite: 1]
+    // Fetch accurate titles 
     async function fetchTitles() {
         const elements = document.querySelectorAll('.yt-title');
         for (let el of elements) {
             try {
-                const url = el.getAttribute('data-url');
-                const res = await fetch(`https://noembed.com/embed?url=${url}`);
+                // Convert every ID into a standard watch URL format before hitting the API
+                const vidId = el.getAttribute('data-vid-id');
+                const standardUrl = `https://www.youtube.com/watch?v=${vidId}`;
+                
+                const res = await fetch(`https://noembed.com/embed?url=${encodeURIComponent(standardUrl)}`);
                 const data = await res.json();
+                
                 if (data.title) {
                     el.innerText = data.title;
                 } else {
