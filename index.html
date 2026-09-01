@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasikumar C | Brand & Digital Strategist & Creative Director</title>
+    <meta name="description" content="Sasikumar C — Brand & Digital Strategist & Creative Director. Selected media work for Xylem Learning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   ROOT & RESET
+========================================================= */
+:root { --bg: #05070d; --bg-2: #090d17; --text: #f7f9fc; --muted: #9ca7ba; --accent: #63b3ff; --accent-2: #9c7cff; --card: rgba(255,255,255,.055); --card-hover: rgba(255,255,255,.08); --border: rgba(255,255,255,.11); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: "Inter", sans-serif; color: var(--text); background: radial-gradient( circle at 10% 10%, rgba(55,120,255,.17), transparent 30% ), radial-gradient( circle at 90% 20%, rgba(145,70,255,.14), transparent 28% ), radial-gradient( circle at 50% 90%, rgba(0,185,255,.08), transparent 30% ), var(--bg); min-height: 100vh; overflow-x: hidden; }
+
+/* =========================================================
+   BACKGROUND EFFECTS
+========================================================= */
+.background { position: fixed; inset: 0; z-index: -10; overflow: hidden; pointer-events: none; }
+.orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: .17; animation: floating 14s ease-in-out infinite alternate; }
+.orb-1 { width: 360px; height: 360px; background: #1677ff; top: -80px; left: -120px; }
+.orb-2 { width: 300px; height: 300px; background: #863cff; top: 40%; right: -100px; animation-delay: -4s; }
+.orb-3 { width: 240px; height: 240px; background: #00bfff; bottom: -80px; left: 42%; animation-delay: -8s; }
+@keyframes floating { from { transform: translate3d(0,-20px,0) scale(1); } to { transform: translate3d(35px,30px,0) scale(1.08); } }
+.grid-background { position: fixed; inset: 0; z-index: -9; pointer-events: none; background-image: linear-gradient( rgba(255,255,255,.025) 1px, transparent 1px ), linear-gradient( 90deg, rgba(255,255,255,.025) 1px, transparent 1px ); background-size: 70px 70px; mask-image: linear-gradient( to bottom, black, transparent 90% ); }
+
+/* =========================================================
+   NAVIGATION & HERO
+========================================================= */
+nav { position: sticky; top: 0; z-index: 100; background: rgba(5,7,13,.72); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,.08); }
+.nav-inner { max-width: 1380px; margin: auto; padding: 19px 35px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 17px; font-weight: 800; letter-spacing: -.04em; } .logo span { color: var(--accent); }
+.nav-link { color: #dce4f1; text-decoration: none; font-size: 12px; font-weight: 700; padding: 10px 17px; border: 1px solid rgba(255,255,255,.12); border-radius: 50px; transition: .25s ease; }
+.nav-link:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.25); transform: translateY(-1px); }
+.hero { max-width: 1380px; min-height: 650px; margin: auto; padding: 110px 35px 100px; display: flex; flex-direction: column; justify-content: center; }
+.hero-eyebrow { width: fit-content; padding: 8px 15px; border: 1px solid rgba(99,179,255,.25); border-radius: 50px; background: rgba(99,179,255,.07); color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 28px; }
+.hero h1 { font-family: "Playfair Display", serif; font-size: clamp(58px, 10vw, 138px); line-height: .88; letter-spacing: -.065em; max-width: 1100px; }
+.hero h1 span { display: block; background: linear-gradient( 105deg, #ffffff 15%, #72baff 55%, #a982ff 100% ); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero-role { margin-top: 25px; font-size: clamp(19px, 2.7vw, 34px); line-height: 1.3; font-weight: 600; letter-spacing: -.025em; color: #dfe7f4; } .hero-role span { color: var(--accent); }
+.hero-description { max-width: 720px; margin-top: 28px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+.hero-line { width: 120px; height: 2px; margin-top: 45px; background: linear-gradient( 90deg, var(--accent), var(--accent-2), transparent ); }
+
+/* =========================================================
+   MAIN & SECTIONS
+========================================================= */
+main { max-width: 1380px; margin: auto; padding: 0 35px 130px; }
+.client-intro { margin-top: 20px; margin-bottom: 80px; padding: 35px 0; border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.client-label { color: var(--accent); font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; margin-bottom: 10px; }
+.client-name { font-family: "Playfair Display", serif; font-size: clamp(30px, 4vw, 48px); letter-spacing: -.04em; }
+.client-description { max-width: 500px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.portfolio-section { margin-top: 90px; }
+.section-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 35px; padding-bottom: 25px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.section-number { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .15em; margin-bottom: 12px; }
+.section-title { font-size: clamp(29px, 4vw, 48px); line-height: 1.05; letter-spacing: -.045em; }
+.section-subtitle { color: var(--muted); font-size: 14px; margin-top: 12px; line-height: 1.6; }
+.video-count { color: #7f8a9d; font-size: 11px; font-weight: 700; white-space: nowrap; }
+
+/* =========================================================
+   CARDS & GRIDS
+========================================================= */
+.video-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 22px; }
+.card { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s ease, box-shadow .35s ease; animation: cardAppear .65s both; }
+.card:hover { transform: translateY(-8px); background: var(--card-hover); border-color: rgba(99,179,255,.35); box-shadow: 0 25px 70px rgba(0,0,0,.45), 0 0 40px rgba(80,140,255,.08); }
+.card-link { display: block; text-decoration: none; color: inherit; }
+.thumbnail { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #111722; }
+.thumbnail img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease, filter .5s ease; }
+.card:hover .thumbnail img { transform: scale(1.07); filter: brightness(.68); }
+.thumbnail::after { content: ""; position: absolute; inset: 0; background: linear-gradient( to top, rgba(0,0,0,.65), transparent 62% ); pointer-events: none; }
+.play-button { position: absolute; z-index: 5; left: 50%; top: 50%; transform: translate(-50%,-50%) scale(.92); width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.94); color: #111827; font-size: 20px; padding-left: 3px; box-shadow: 0 12px 45px rgba(0,0,0,.4); transition: .3s ease; }
+.card:hover .play-button { transform: translate(-50%,-50%) scale(1.1); box-shadow: 0 0 0 9px rgba(255,255,255,.08), 0 15px 50px rgba(0,0,0,.5); }
+.card-content { padding: 20px; }
+.card-label { color: var(--accent); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 10px; }
+.card-title { color: #f2f5fa; font-size: 15px; line-height: 1.55; font-weight: 600; }
+
+/* SHORT FORM OVERRIDES */
+.short-form .video-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+.short-form .card { border-radius: 3px; background: #111a28; border: 1px solid #27364b; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.short-form .card:hover { transform: translateY(-5px); background: #111a28; border-color: #3f5573; box-shadow: 0 10px 35px rgba(0,0,0,.5); }
+.short-form .thumbnail { aspect-ratio: 9 / 16; border-bottom: 1px solid #27364b; }
+.short-form .card-content { padding: 14px; background: #111a28; }
+.short-form .card-label { display: none; }
+.short-form .card-title { font-size: 13.5px; line-height: 1.45; font-weight: 600; color: #ffffff; }
+.short-form .play-button { width: 50px; height: 50px; background: rgba(0, 0, 0, 0.45); border: 2px solid rgba(255, 255, 255, 0.4); color: #8cb4ff; padding-left: 4px; font-size: 16px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); box-shadow: none; }
+.short-form .card:hover .play-button { background: rgba(0, 0, 0, 0.7); border-color: rgba(255, 255, 255, 0.75); transform: translate(-50%,-50%) scale(1.05); box-shadow: none; }
+
+/* FOOTER & MEDIA QUERIES */
+footer { border-top: 1px solid rgba(255,255,255,.08); padding: 45px 35px; text-align: center; color: #788397; font-size: 12px; line-height: 1.7; }
+@keyframes cardAppear { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width:1050px) { .video-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .short-form .video-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width:680px) { .nav-inner { padding: 16px 20px; } .nav-link { padding: 8px 12px; } .hero { min-height: 560px; padding: 80px 20px 70px; } .hero-role { font-size: 19px; } .hero-description { font-size: 14px; } main { padding: 0 20px 90px; } .client-intro { display: block; } .client-description { margin-top: 20px; } .video-grid { grid-template-columns: 1fr; } .short-form .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .section-header { display: block; } .video-count { display: block; margin-top: 15px; } footer { padding: 40px 20px; } }
+</style>
+</head>
+<body>
+
+<div class="background">
+    <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
+</div>
+<div class="grid-background"></div>
+
+<nav>
+    <div class="nav-inner">
+        <div class="logo">Sasikumar <span>C</span></div>
+        <a href="https://www.youtube.com/@XylemLearning" target="_blank" rel="noopener noreferrer" class="nav-link">340+ Videos ↗</a>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="hero-eyebrow">Personal Portfolio</div>
+    <h1><span>Sasikumar C</span></h1>
+    <div class="hero-role">Brand &amp; Digital Strategist <span>&amp;</span> Creative Director</div>
+    <p class="hero-description">Building brands through strategic thinking, digital storytelling, creative direction and purposeful content.</p>
+    <div class="hero-line"></div>
+</header>
+
+<main>
+    <section class="client-intro">
+        <div>
+            <div class="client-label">My Top Works</div>
+            <div class="client-name">Xylem Learning</div>
+        </div>
+        <p class="client-description">A curated collection of long-form and short-form media across content strategy, creative direction, shoot support, hosting and content.</p>
+    </section>
+
+    <!-- SECTION 01: LONG FORM -->
+    <section class="portfolio-section">
+        <div class="section-header">
+            <div>
+                <div class="section-number">01 / LONG-FORM MEDIA</div>
+                <h2 class="section-title">Long-Form Media</h2>
+                <p class="section-subtitle">Content Strategy + Creative Direction</p>
+            </div>
+            <div class="video-count">Selected Work</div>
+        </div>
+        <div class="video-grid" id="long-videos-grid"></div>
+    </section>
+
+    <!-- SECTION 02: CREATIVE SHORTS -->
+    <section class="portfolio-section short-form">
+        <div class="section-header">
+            <div>
+                <div class="section-number">02 / SHORT-FORM MEDIA</div>
+                <h2 class="section-title">Creative Shorts</h2>
+                <p class="section-subtitle">Content Strategy + Creative Direction + Shoot Support</p>
+            </div>
+            <div class="video-count">Selected Work</div>
+        </div>
+        <div class="video-grid" id="creative-shorts-grid"></div>
+    </section>
+
+    <!-- SECTION 03: NORMAL SHORTS -->
+    <section class="portfolio-section short-form">
+        <div class="section-header">
+            <div>
+                <div class="section-number">03 / SHORT-FORM MEDIA</div>
+                <h2 class="section-title">Normal Shorts</h2>
+                <p class="section-subtitle">Host + Content</p>
+            </div>
+            <div class="video-count">Selected Work</div>
+        </div>
+        <div class="video-grid" id="normal-shorts-grid"></div>
+    </section>
+</main>
+
+<footer>© 2026 Sasikumar C · Brand &amp; Digital Strategist &amp; Creative Director</footer>
+
+<script>
+    // Document Data Links
+    const longVideos = [
+        "https://youtu.be/wV8q6Hvl49I", "https://youtu.be/8haV4QUwWDo", "https://youtu.be/9sJELDiHOZ8", "https://youtu.be/76dpwal7Xh0", "https://www.youtube.com/live/1kOrveu9ZkI", "https://www.youtube.com/live/Qw_y4hIkfDI", "https://www.youtube.com/live/dwM-feU3Iv0", "https://www.youtube.com/live/tMrRv72Nbf8", "https://youtu.be/UvIJmI5Ot58", "https://youtu.be/cyaZRJN8G1o", "https://youtu.be/1C-RufNGSKA", "https://youtu.be/DSRyxJWUVzk", "https://youtu.be/QuFr-8OIwSQ", "https://youtu.be/bCS-QyrFZ0k", "https://youtu.be/gifKdbh8zSI", "https://youtu.be/dj_y_ImvOnU", "https://youtu.be/w5N_CIQtSmg", "https://youtu.be/ftonifPgZOo", "https://youtu.be/P0uP3tfl9co", "https://youtu.be/lppWBCjg6_0", "https://youtu.be/HP8puCkkmaA", "https://youtu.be/AYL5E6hxJvI", "https://youtu.be/AgLGSd3l-wg", "https://youtu.be/SznQxrn-Cmg", "https://youtu.be/XiZQw0Xsk7M", "https://youtu.be/hl2UwhrHjVA", "https://youtu.be/AYdAuKQGBEc", "https://youtu.be/t01GC-63n0U", "https://youtu.be/XZSKpX6CVqI", "https://youtu.be/QC8_EEMwjVc", "https://youtu.be/VxlCvAuy5Pc", "https://youtu.be/dE9nfIGsq10", "https://youtu.be/I3wWUL3zs30", "https://youtu.be/yjiadNyspk0", "https://youtu.be/LXRtRRbind0", "https://youtu.be/2Ah-d4VfHuk", "https://youtu.be/IMRClp2zMAc", "https://youtu.be/6DtZN9PQo8Y", "https://youtu.be/TD5QgGBFq5M", "https://youtu.be/QSXipIKnhEc", "https://youtu.be/1h-VjMWDgAQ", "https://youtu.be/uFsapulltYg", "https://youtu.be/4-_K5ch2TPM", "https://youtu.be/DygWmQvumiI", "https://youtu.be/ArgA9k003Tw", "https://youtu.be/oUVj2GrqW9A", "https://youtu.be/s22cwJ3fCMc", "https://youtu.be/jButFEjeddA", "https://youtu.be/MLNaYQoegrY", "https://youtu.be/KZyXq8Hpb2g", "https://youtu.be/7Fj0807DCU8", "https://youtu.be/qdp43iUV_oM", "https://youtu.be/90qPdbLBGq4", "https://youtu.be/LiaXk57N9kc", "https://youtu.be/s1WR0y4xijc", "https://youtu.be/fijiGHhxeG8", "https://youtu.be/wXRtjQeEox4", "https://youtu.be/Lz4VleSdcMw", "https://youtu.be/fXFVyak2GXE", "https://youtu.be/EXvgFuZBhkA", "https://youtu.be/574_2WoNw6g", "https://youtu.be/ZS3VTaJNycU", "https://youtu.be/mN_GFEaFyto", "https://youtu.be/SOYlsca0yho", "https://youtu.be/CsQwf5G0KV8", "https://youtu.be/MnKSs3kfRLE", "https://youtu.be/lZMFOqNKztM"
+    ];
+
+    const creativeShorts = [
+        "https://youtube.com/shorts/8HT-QnMwbCY", "https://youtube.com/shorts/Bk1MSTgn-9I", "https://youtube.com/shorts/H8svFWAioYU", "https://youtube.com/shorts/I2ZR9xJgFzQ", "https://youtube.com/shorts/5sFrymly5dc", "https://youtube.com/shorts/Yo8Jhx7NTV0", "https://youtube.com/shorts/po36ksALquA", "https://youtube.com/shorts/2StmPY0W6Nc", "https://www.youtube.com/shorts/NR0R3xDW0qU", "https://www.youtube.com/shorts/UlO3F8d2I_U", "https://www.youtube.com/shorts/ZeG5Z065CMg", "https://www.youtube.com/shorts/RXZT73jLAIY", "https://www.youtube.com/shorts/HQRxWkUUZVU", "https://www.youtube.com/shorts/NBjof7Bl8lQ", "https://www.youtube.com/shorts/2arO2Y-CZrA", "https://www.youtube.com/shorts/QnBH1QMtsCo", "https://www.youtube.com/shorts/qWmI5SyuY-o", "https://www.youtube.com/shorts/kzkdEY2b1OY", "https://www.youtube.com/shorts/3WH2ZP6paN4", "https://www.youtube.com/shorts/-6gh8jeeETs", "https://www.youtube.com/shorts/lHhSr0Ptp9E", "https://www.youtube.com/shorts/7KNSLBJrwUw", "https://www.youtube.com/shorts/atk02tlCu0A", "https://www.youtube.com/shorts/FHfAMU_ZW1o", "https://www.youtube.com/shorts/Nwm7Mr1JNes", "https://www.youtube.com/shorts/0Bt2SvktrH8", "https://www.youtube.com/shorts/LJM1YIHVUeY", "https://www.youtube.com/shorts/8B-vtv0UdXQ", "https://www.youtube.com/shorts/zvildtDp-2Y", "https://www.youtube.com/shorts/bSIdLNIq9qc", "https://www.youtube.com/shorts/TrFwjxXTU2w", "https://www.youtube.com/shorts/KSMUuxSILTE", "https://www.youtube.com/shorts/bPLbyhLIy6k", "https://www.youtube.com/shorts/TWV6GDLFj6I", "https://www.youtube.com/shorts/r4NRGlcdpRo", "https://youtube.com/shorts/LkReF9A-1ng", "https://youtube.com/shorts/fzB7TIFhzZI", "https://youtube.com/shorts/Ge-xkE7iwas", "https://youtube.com/shorts/VLYBRqlSUWc", "https://youtube.com/shorts/DLp-SI7cHic", "https://youtube.com/shorts/w25f-UFGWbo", "https://youtube.com/shorts/4aZqjqgi_qg", "https://youtube.com/shorts/wQQ7eqQo5fQ", "https://youtube.com/shorts/0AfkAioLaEw", "https://youtube.com/shorts/PdQzC7vrzwM", "https://youtube.com/shorts/XCR8FWyzMyE", "https://youtube.com/shorts/nizwBLifmUo", "https://youtube.com/shorts/sM3VE9EPOo8", "https://youtube.com/shorts/i4iD5bIar0w", "https://youtube.com/shorts/Obw6szouyYo", "https://youtube.com/shorts/NsUcWko-y_8", "https://youtube.com/shorts/EUU-hj3lzDg", "https://youtube.com/shorts/pxPx69NJNcU", "https://youtube.com/shorts/hnEnyAOYQbQ", "https://youtube.com/shorts/3YbNjv23akk", "https://youtube.com/shorts/Tvmi_tcHO44", "https://youtube.com/shorts/fWT2XgAF7wQ", "https://youtube.com/shorts/nPmCufrlnc4", "https://youtube.com/shorts/Vj7IablSaU8", "https://youtube.com/shorts/ZTGmD5P0erU", "https://youtube.com/shorts/Wwwj-2iCGtg", "https://youtube.com/shorts/IL9fVqh5tS0", "https://youtube.com/shorts/1Iq20nNtQh0", "https://youtube.com/shorts/aRmt49kdNcY", "https://youtube.com/shorts/x3da5W1X_aM", "https://youtube.com/shorts/l4YVSClpYMw", "https://youtube.com/shorts/GNEkmlsLrC0", "https://youtube.com/shorts/gsJD6UdjzfE", "https://youtube.com/shorts/scI-Z9agY-Q", "https://youtube.com/shorts/t4EPtH5NLp4", "https://youtube.com/shorts/3Hf7t_IbhAE", "https://youtube.com/shorts/XOhO7fJ9VGA", "https://youtube.com/shorts/6ZxkdUbPJ8o", "https://youtube.com/shorts/2WScGAavN-w", "https://youtube.com/shorts/ORBwzIhXyUk", "https://youtube.com/shorts/S0hCP0d2UFw", "https://youtube.com/shorts/Za--qo5_x84", "https://youtube.com/shorts/IZGcy7xRmvc", "https://youtube.com/shorts/9Hgz5Drt9sg", "https://youtube.com/shorts/Kae6bEWWLQU", "https://youtube.com/shorts/jo0rTRW-iKI", "https://youtube.com/shorts/DP4Qn0uDRXE", "https://youtube.com/shorts/_q4Wws2wYeI", "https://youtube.com/shorts/8y-CmODK8wk", "https://www.youtube.com/shorts/ndsP7t8uApY", "https://www.youtube.com/shorts/HogGtsF7vqo", "https://www.youtube.com/shorts/hYq1jP5TvWw", "https://www.youtube.com/shorts/4a7XzabvSqQ", "https://www.youtube.com/shorts/sXjXchxj9z4", "https://www.youtube.com/shorts/JCmNuZre4qA", "https://www.youtube.com/shorts/yKy6YBlHRMU", "https://www.youtube.com/shorts/uPHlha0879k", "https://www.youtube.com/shorts/76dpwal7Xh0", "https://www.youtube.com/shorts/2zkvzNh56cI", "https://www.youtube.com/shorts/v74XSnp1SL0", "https://youtube.com/shorts/f-B1lbpwum8"
+    ];
+
+    const normalShorts = [
+        "https://youtube.com/shorts/eIGv9aDsQxo", "https://youtube.com/shorts/EM5cKY2a7UI", "https://youtube.com/shorts/IganEqfZWYM", "https://youtube.com/shorts/T-eq8Gvet64", "https://youtube.com/shorts/c3AO26GMelY", "https://youtube.com/shorts/GQL0q7kkyzM", "https://youtube.com/shorts/WF12Srfh2hc", "https://youtube.com/shorts/LMFs4NzwC7k", "https://youtube.com/shorts/BRsuvUwHZ9I", "https://youtube.com/shorts/ajIzVcRbSSk", "https://youtube.com/shorts/CkQz0cvFD6s", "https://youtube.com/shorts/hlbEgf3IXnA", "https://youtube.com/shorts/HBnHI0dOjd4", "https://youtube.com/shorts/RoUhEwGPCAc", "https://youtube.com/shorts/3LcKbMWvYuQ", "https://youtube.com/shorts/jRVrps551fY", "https://youtube.com/shorts/Y72OMcRBA3I", "https://youtube.com/shorts/YvF0G9IB-50", "https://youtube.com/shorts/dQO3J_p9mYE", "https://youtube.com/shorts/w3EG8dLZ5b8", "https://youtube.com/shorts/9P7DxFgzl10", "https://youtube.com/shorts/4t0A4I85YAU", "https://youtube.com/shorts/nZzjJvoy9O0", "https://youtube.com/shorts/0SsZbTK0rl8", "https://youtube.com/shorts/2YlOy1QbeZ8", "https://youtube.com/shorts/527OhqpFIV0", "https://youtube.com/shorts/RLxyKJiGxaQ", "https://youtube.com/shorts/hckwSMC-HWg", "https://youtube.com/shorts/zf2Gfo_qrhM", "https://youtube.com/shorts/34RqWWwb0w8", "https://youtube.com/shorts/KO0l619zsuU", "https://youtube.com/shorts/gC2eMOkUYa0", "https://youtube.com/shorts/X3vkIzHlFCw", "https://youtube.com/shorts/mMm7KEfC_wY", "https://youtube.com/shorts/nQ5V0kZYxYM", "https://youtube.com/shorts/krODAhBoABI", "https://youtube.com/shorts/EhhEA-mcKow", "https://youtube.com/shorts/IS3eaKXDDls", "https://youtube.com/shorts/9N3RNqgn864", "https://youtube.com/shorts/AxWS3c2r8fA", "https://youtube.com/shorts/ssIGHL8lD4M", "https://youtube.com/shorts/nyV5RoOOXW0", "https://youtube.com/shorts/G60BeaWqTzU", "https://youtube.com/shorts/ByccRq3VgNc", "https://youtube.com/shorts/DmqhiyTomRc", "https://youtube.com/shorts/WFZO-074gC4", "https://youtube.com/shorts/9f1xOpgLi34", "https://youtube.com/shorts/mXgOl9mykYc", "https://youtube.com/shorts/CuyqDuYOtYY", "https://youtube.com/shorts/pGXlRCOmSIM", "https://youtube.com/shorts/GrUGEVZq4IU", "https://youtube.com/shorts/mLeg9P3siZ0", "https://youtube.com/shorts/aGB7T_dHUJQ", "https://youtube.com/shorts/PQlNVs3MzOE", "https://youtube.com/shorts/-Q-vyts499o", "https://www.youtube.com/shorts/ECu_ZT4T4C8", "https://youtube.com/shorts/qM4iWrLwiU4", "https://youtube.com/shorts/amuAmxNrzDY", "https://youtube.com/shorts/8v2ljPAajVA", "https://youtube.com/shorts/obtNL0XQ3a4", "https://youtube.com/shorts/HM2SbZ6Q3qI", "https://youtube.com/shorts/FzAgajt7SLE", "https://youtube.com/shorts/6R2Nu7ILuZc", "https://youtube.com/shorts/s9dPcyWKMLw", "https://youtube.com/shorts/LZ27OuIgA1A", "https://www.youtube.com/shorts/eGfTsn8G1oM", "https://www.youtube.com/shorts/UP-GgYVSTag", "https://www.youtube.com/shorts/TJG5hyahVzU", "https://www.youtube.com/shorts/Rl-DWjOKNNg", "https://www.youtube.com/shorts/-YsZzUFyjiE", "https://www.youtube.com/shorts/kHsdpu65kJE", "https://www.youtube.com/shorts/aP_V0S5-TS8", "https://www.youtube.com/shorts/JMyRkr8fX8U", "https://www.youtube.com/shorts/-oLVgEkGOko", "https://www.youtube.com/shorts/EWRpwrw5eC8", "https://www.youtube.com/shorts/lm0nspA_VrI", "https://www.youtube.com/shorts/bJvxS1i_paM", "https://www.youtube.com/shorts/Sgfw19izFww", "https://www.youtube.com/shorts/KdD5tDdz_Xk", "https://www.youtube.com/shorts/E-Z2xtU1BxE", "https://www.youtube.com/shorts/yVcwbM3jwHI", "https://www.youtube.com/shorts/Drk3x5yP7H4", "https://www.youtube.com/shorts/xPJs8QExKHU", "https://www.youtube.com/shorts/26vEh7P2SNM", "https://www.youtube.com/shorts/xNnh_skThs0", "https://www.youtube.com/shorts/ZYC8lr_Nkg4", "https://www.youtube.com/shorts/bimSwrhExps", "https://www.youtube.com/shorts/IaO3wGzJqpk", "https://www.youtube.com/shorts/gHPQfbuWGYU", "https://www.youtube.com/shorts/HAgGBUKcOvc", "https://www.youtube.com/shorts/qN_xeE4n5yk", "https://www.youtube.com/shorts/Jf05mw_EbS4", "https://www.youtube.com/shorts/lI7Rj5wxjkQ", "https://www.youtube.com/shorts/_dEPoNkFb3w", "https://www.youtube.com/shorts/eaZ9_mDOC1s", "https://www.youtube.com/shorts/67Ca0ojMkxQ", "https://www.youtube.com/shorts/j37SlKmKj8Q", "https://www.youtube.com/shorts/TVHD3BW6z9c", "https://www.youtube.com/shorts/Mw5kFn39dgo", "https://www.youtube.com/shorts/TnUO3LKunC0", "https://www.youtube.com/shorts/f7Pd7_iVog0", "https://www.youtube.com/shorts/CMwYWy8v1ug", "https://www.youtube.com/shorts/la2HJaH-YW8", "https://www.youtube.com/shorts/lqdWtF1k4js", "https://www.youtube.com/shorts/0kQ-4W-gwEM", "https://www.youtube.com/shorts/GruJInZB5Jg", "https://youtube.com/shorts/c_geWNnScig", "https://youtube.com/shorts/sKqs4BJD780", "https://youtube.com/shorts/tofvjj2oaYo", "https://youtube.com/shorts/vOF3iZE3B90", "https://youtube.com/shorts/LymSxE8NRzw", "https://youtube.com/shorts/HGqVpOZrJzY", "https://youtube.com/shorts/HPvREWF0LSc", "https://youtube.com/shorts/oE2hJ8Qv0sk", "https://youtube.com/shorts/NwOFEY_dr9s", "https://youtube.com/shorts/EUGhwxZYidI", "https://youtube.com/shorts/oGEesCkkENk", "https://youtube.com/shorts/2WppinWDM3U", "https://youtube.com/shorts/vyao3jpOBW4", "https://youtube.com/shorts/NDkOnR7cuEw", "https://youtube.com/shorts/lEiTqPdwKzo", "https://youtube.com/shorts/IPIdmVOy4Cs", "https://youtube.com/shorts/O5B1BNP30Dg", "https://youtube.com/shorts/gcy3iL_J4i8", "https://youtube.com/shorts/OvvRbYNTiUk", "https://youtube.com/shorts/gTHXj56GZTo", "https://youtube.com/shorts/xGMRsw11VHs", "https://youtube.com/shorts/glWTy2T8BtI", "https://youtube.com/shorts/mN60CjcGTys", "https://youtube.com/shorts/PNa_XUa6hR0", "https://youtube.com/shorts/gyI0i0vnytA", "https://youtube.com/shorts/RKbYyf8MhJU", "https://youtube.com/shorts/uqQ5EGaHr0A", "https://youtube.com/shorts/z46Y-Ntzhtk", "https://youtube.com/shorts/TDSBM5vM7Hk", "https://youtube.com/shorts/g74VrMVKZSk", "https://www.youtube.com/shorts/xW7moDIO6jQ"
+    ];
+
+    // Card Generation Logic
+    function buildCards(urls, containerId, label, isShort) {
+        const container = document.getElementById(containerId);
+        urls.forEach(url => {
+            const vidMatch = url.match(/(?:v=|\/)([0-9A-Za-z_-]{11})/);
+            if (!vidMatch) return;
+            const vidId = vidMatch[1];
+            // Shorts look better with hqdefault, longs use maxresdefault
+            const imgSrc = isShort ? `https://img.youtube.com/vi/${vidId}/hqdefault.jpg` : `https://img.youtube.com/vi/${vidId}/maxresdefault.jpg`;
+            
+            const article = document.createElement('article');
+            article.className = 'card';
+            article.innerHTML = `
+                <a href="${url}" target="_blank" rel="noopener noreferrer" class="card-link">
+                    <div class="thumbnail">
+                        <img src="${imgSrc}" alt="Xylem Learning Content" loading="lazy">
+                        <div class="play-button">▶</div>
+                    </div>
+                </a>
+                <div class="card-content">
+                    <p class="card-label">${label}</p>
+                    <p class="card-title yt-title" data-url="${url}">Loading title...</p>
+                </div>
+            `;
+            container.appendChild(article);
+        });
+    }
+
+    // Render elements instantly
+    buildCards(longVideos, 'long-videos-grid', 'Long-Form Media', false);
+    buildCards(creativeShorts, 'creative-shorts-grid', 'Creative Short', true);
+    buildCards(normalShorts, 'normal-shorts-grid', 'Normal Short', true);
+
+    // Fetch accurate titles progressively to avoid browser lag[cite: 1]
+    async function fetchTitles() {
+        const elements = document.querySelectorAll('.yt-title');
+        for (let el of elements) {
+            try {
+                const url = el.getAttribute('data-url');
+                const res = await fetch(`https://noembed.com/embed?url=${url}`);
+                const data = await res.json();
+                if (data.title) {
+                    el.innerText = data.title;
+                } else {
+                    el.innerText = "Xylem Learning Video";
+                }
+            } catch (e) {
+                el.innerText = "Xylem Learning Video";
+            }
+        }
+    }
+    
+    // Start fetching titles right after the DOM renders
+    window.addEventListener('load', fetchTitles);
+</script>
+</body>
+</html>
